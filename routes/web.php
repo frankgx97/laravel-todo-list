@@ -27,4 +27,4 @@ Route::get('/about','MainController@about');
 
 Route::post('/add','MainController@submit');
 
-Route::get('/del/{id}','MainController@remove($id)');
+Route::get('/del/{id}','MainController@remove');
