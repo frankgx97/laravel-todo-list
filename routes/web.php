@@ -11,6 +11,20 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/','MainController@index');
+
+Route::get('/add','MainController@add');
+
+Route::get('/about','MainController@about');
+
+Route::post('/add','MainController@submit');
+
+Route::get('/del/{id}','MainController@remove($id)');
